@@ -1,0 +1,11 @@
+{
+  "titles": {
+    "heroGreeting": "Hello!",
+    "heroIntro": "I'm Wen Bin,",
+    "heroSubIntro": [
+      "a Front-end Engineer.",
+      "I design and build things.",
+      "someone who loves solving problems."
+    ]
+  }
+}
