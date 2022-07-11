@@ -40,6 +40,9 @@
     "node": ">=14"
   },
   "lint-staged": {
-    "**/*": "prettier --write --ignore-unknown"
+    "app/**/*.{js,jsx,ts,tsx,json}": [
+      "eslint",
+      "prettier --check"
+    ]
   }
 }
