@@ -40,5 +40,15 @@ module.exports = {
     "import/no-unresolved": "error",
     "@typescript-eslint/semi": "off",
     semicolon: "off",
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        js: "never",
+        jsx: "never",
+        ts: "never",
+        tsx: "never",
+      },
+    ],
   },
 };
