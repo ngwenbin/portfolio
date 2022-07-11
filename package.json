@@ -3,7 +3,10 @@
   "sideEffects": false,
   "scripts": {
     "build": "remix build",
-    "dev": "remix dev"
+    "dev": "remix dev",
+    "commit": "git commit",
+    "lint": "eslint ./app --ext .js,.jsx,.ts,.tsx",
+    "format": "prettier --check ."
   },
   "dependencies": {
     "@remix-run/node": "^1.6.4",
@@ -19,10 +22,24 @@
     "@remix-run/serve": "^1.6.4",
     "@types/react": "^17.0.45",
     "@types/react-dom": "^17.0.17",
-    "eslint": "^8.15.0",
+    "@typescript-eslint/eslint-plugin": "^5.30.5",
+    "@typescript-eslint/parser": "^5.30.5",
+    "eslint": "^7.32.0 || ^8.2.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "prettier": "2.7.1",
     "typescript": "^4.6.4"
   },
   "engines": {
     "node": ">=14"
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
   }
 }
