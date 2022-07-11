@@ -14,23 +14,23 @@ export function links() {
 }
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
-  title: "New Remix App",
+  title: "Wen Bin | Front-end engineer",
   viewport: "width=device-width,initial-scale=1",
 });
 
-export default function App() {
-  return (
-    <html lang="en">
-      <head>
-        <Meta />
-        <Links />
-      </head>
-      <body>
-        <Outlet />
-        <ScrollRestoration />
-        <Scripts />
-        <LiveReload />
-      </body>
-    </html>
-  );
-}
+const App = () => (
+  <html lang="en">
+    <head>
+      <Meta />
+      <Links />
+    </head>
+    <body>
+      <Outlet />
+      <ScrollRestoration />
+      <Scripts />
+      <LiveReload />
+    </body>
+  </html>
+);
+
+export default App;
