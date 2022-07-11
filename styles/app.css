@@ -7,3 +7,13 @@
     @apply ...;
   }
 }
+
+@layer base {
+  @font-face {
+    font-family: Inter;
+    src: url("/fonts/Inter-VariableFont_wght.ttf")
+        format("ttf supports variations"),
+      url("/fonts/Inter-VariableFont_wght.ttf") format("ttf-variations");
+    font-weight: 200 800;
+  }
+}
