@@ -48,7 +48,6 @@
   },
   "lint-staged": {
     "app/**/*.{js,jsx,ts,tsx,json}": [
-      "eslint",
       "prettier --check"
     ]
   }
