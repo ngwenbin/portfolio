@@ -2,17 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
-  .custom-class {
-    @apply ...;
-  }
-}
-
 @layer base {
   @font-face {
     font-family: "Inter";
-    src: url("assets/fonts/Inter-VariableFont_wght.ttf")
-      format("ttf-variations");
+    src: url("/assets/fonts/Inter-VariableFont_wght.ttf");
     font-weight: 200 800;
+  }
+  @font-face {
+    font-family: Caveat;
+    src: url("/assets/fonts/Caveat-VariableFont_wght.ttf");
+    font-weight: 200 800;
+  }
+}
+
+@layer components {
+  .hero-big {
+    @apply font-bold text-6xl md:text-7xl lg:text-8xl xl:text-9xl text-white font-caveat;
+  }
+  .hero-body {
+    @apply font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl  xl:text-6xl text-white;
   }
 }
