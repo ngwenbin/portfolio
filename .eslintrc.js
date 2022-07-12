@@ -40,6 +40,9 @@ module.exports = {
     "import/no-unresolved": "error",
     "@typescript-eslint/semi": "off",
     semicolon: "off",
+    "react/no-array-index-key": "off",
+    "react/require-default-props": "off",
+    "react/prop-types": "off",
     "import/extensions": [
       "error",
       "ignorePackages",
