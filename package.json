@@ -8,7 +8,8 @@
     "dev:css": "tailwindcss -w -i ./styles/app.css -o app/styles/app.css",
     "commit": "git commit",
     "lint": "eslint ./app --ext .js,.jsx,.ts,.tsx",
-    "format": "prettier --check ."
+    "format": "prettier --check .",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@remix-run/node": "^1.6.4",
