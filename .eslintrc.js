@@ -43,6 +43,7 @@ module.exports = {
     "react/no-array-index-key": "off",
     "react/require-default-props": "off",
     "react/prop-types": "off",
+    "arrow-body-style": [0, "never"],
     "import/extensions": [
       "error",
       "ignorePackages",

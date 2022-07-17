@@ -1,8 +1,9 @@
 import { Navbar } from "~/components";
 import type { NavItem } from "~/components";
-import blob from "~/images/blob.webp";
+// import blob from "~/images/blob.webp";
 import pageKeys from "~/content/pageKeys.json";
 import { Outlet } from "@remix-run/react";
+import Typewritter from "~/components/Typewritter";
 
 const navItems: NavItem[] = [
   {
@@ -58,7 +59,7 @@ const RootPage = () => (
         </div>
         <div className="flex flex-col items-start space-y-2 xl:space-y-4 mt-6 xl:mt-10 hero-body">
           <p>{pageKeys.titles.heroIntro}</p>
-          <p>{pageKeys.titles.heroSubIntro[0]}</p>
+          <Typewritter strings={pageKeys.titles.heroSubIntro} />
         </div>
       </div>
       <div className="flex-1">
