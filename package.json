@@ -8,7 +8,8 @@
     "dev:css": "tailwindcss -w -i ./styles/app.css -o app/styles/app.css",
     "commit": "git commit",
     "lint": "eslint ./app --ext .js,.jsx,.ts,.tsx",
-    "format": "prettier --check ."
+    "format": "prettier --check .",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@remix-run/node": "^1.6.4",
@@ -17,7 +18,8 @@
     "@vercel/node": "^1.15.2",
     "clsx": "^1.2.1",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "react-spring": "^9.5.0"
   },
   "devDependencies": {
     "@remix-run/dev": "^1.6.4",
