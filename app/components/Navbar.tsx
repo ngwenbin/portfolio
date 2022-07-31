@@ -14,9 +14,13 @@ interface NavBarProps {
 }
 
 const Navbar = ({ navItems, className, linkClassName }: NavBarProps) => (
-  <div className={clsx("flex flex-row", className)}>
+  <div className={clsx("flex flex-row flex-wrap gap-x-4 gap-y-2", className)}>
     {navItems.map((item, idx) => (
-      <Link to={item.route} key={idx} className={linkClassName}>
+      <Link
+        to={item.route}
+        key={idx}
+        className={clsx("border border-gray-700 p-3 rounded-md", linkClassName)}
+      >
         {item.name}
       </Link>
     ))}
