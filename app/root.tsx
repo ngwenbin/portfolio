@@ -24,7 +24,7 @@ const App = () => (
       <Meta />
       <Links />
     </head>
-    <body>
+    <body className="bg-gradient-to-r from-black to-[#2c3743]">
       <Outlet />
       <ScrollRestoration />
       <Scripts />
