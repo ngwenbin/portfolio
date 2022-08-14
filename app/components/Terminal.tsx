@@ -39,18 +39,23 @@ const Terminal = () => {
             "git checkout \n[root]\n[skills]\n[projects]\n[experience]\n[contact-me]";
           break;
         case "git checkout root":
+          response = "Switched to branch 'root'";
           navigate("/root");
           break;
         case "git checkout skills":
+          response = "Switched to branch 'skills'";
           navigate("skills");
           break;
         case "git checkout projects":
+          response = "Switched to branch 'projects'";
           navigate("projects");
           break;
         case "git checkout experience":
+          response = "Switched to branch 'experience'";
           navigate("experience");
           break;
         case "git checkout contact-me":
+          response = "Switched to branch 'contact-me'";
           navigate("contact-me");
           break;
         case "sudo rm -rf":
@@ -65,8 +70,8 @@ const Terminal = () => {
   };
 
   return (
-    <div className="flex flex-col bg-black rounded-md w-full my-10 sm:text-xs text-[10px] font-fira h-52 tracking-wide">
-      <div className="relative bg-[#393939] rounded-t-md py-1">
+    <div className="flex flex-col bg-black rounded-md w-full mt-10 sm:text-xs text-[10px] font-fira h-52 tracking-wide">
+      <div className="relative bg-[#393939] rounded-t-md py-0.5">
         <p className="absolute z-10 w-full text-center">Terminal</p>
         <div className="flex items-center bg-transparent gap-x-1 h-4 pl-2">
           <div className="flex h-2 w-2 items-center justify-center rounded-full p-1 bg-red-500" />
@@ -75,7 +80,7 @@ const Terminal = () => {
         </div>
       </div>
 
-      <div className="overflow-y-auto bg-black pl-2 py-1">
+      <div className="overflow-y-auto bg-black pl-2 py-0.5 rounded-b-md">
         {terminalRes.map((consoleLog, idx) => {
           return (
             <div key={idx}>

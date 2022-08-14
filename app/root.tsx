@@ -14,7 +14,7 @@ export function links() {
 }
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
-  title: "Wen Bin | Front-end engineer",
+  title: "Wen Bin | Software engineer",
   viewport: "width=device-width,initial-scale=1",
 });
 
@@ -24,7 +24,7 @@ const App = () => (
       <Meta />
       <Links />
     </head>
-    <body className="bg-gradient-to-r from-black to-[#2c3743]">
+    <body className="bg-gradient-to-r from-black to-[#2c3743] h-screen">
       <Outlet />
       <ScrollRestoration />
       <Scripts />
