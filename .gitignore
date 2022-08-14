@@ -12,3 +12,4 @@ node_modules
 
 # tailwind css output
 app/styles/
+.DS_Store
