@@ -9,6 +9,7 @@ module.exports = {
       fontFamily: {
         sans: ["Inter", "sans-serif"],
         caveat: ["Caveat", "cursive"],
+        fira: ["FiraCode"]
       },
     },
   },
