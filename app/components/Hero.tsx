@@ -10,7 +10,7 @@ const Hero = () => {
         <p>{pageKeys.titles.heroIntro}</p>
         <Typewritter
           strings={pageKeys.titles.heroSubIntro}
-          className="text-[#90AECF] min-h-[50px] sm:min-h-[80px]"
+          className="text-[#90AECF] min-h-[50px] sm:min-h-[96px]"
         />
       </div>
     </div>
