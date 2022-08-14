@@ -13,7 +13,7 @@ const RootPage = () => {
         </div>
         <Terminal />
       </div>
-      <div className="hidden sm:block">
+      <div className="hidden sm:block w-full">
         <Outlet />
       </div>
     </div>
