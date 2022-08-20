@@ -70,7 +70,7 @@ const Terminal = () => {
   };
 
   return (
-    <div className="flex flex-col bg-black rounded-md w-full sm:text-xs text-[10px] font-fira h-52 tracking-wide">
+    <div className="flex flex-col bg-black rounded-md w-full sm:text-xs text-[10px] font-fira min-h-[208px] tracking-wide">
       <div className="relative bg-[#393939] rounded-t-md py-0.5">
         <p className="absolute z-10 w-full text-center">Terminal</p>
         <div className="flex items-center bg-transparent gap-x-1 h-4 pl-2">
