@@ -15,9 +15,16 @@ interface ActionData {
 
 const validator = withZod(
   z.object({
-    name: z.string().min(1, "Name is required."),
-    company: z.string().min(1, "Company is required."),
-    email: z.string().min(1, "Email is required."),
+    name: z.string().min(1, "Name is required.").max(30, "Name is too long."),
+    company: z
+      .string()
+      .min(1, "Company is required.")
+      .max(50, "Company is too long."),
+    email: z
+      .string()
+      .min(1, "Email is required.")
+      .max(30, "Email is too long.")
+      .email("Invalid email provided."),
     message: z
       .string()
       .min(1, "Message is required.")
