@@ -36,7 +36,7 @@ const CommonAngle = 60; // Angle to explode nodes from 0,0,0
 
 const TextBox = ({ text }: { text: string }) => {
   return (
-    <div className="bg-gray-900 border border-gray-600 whitespace-nowrap rounded-md p-1 text-[10px] hover:bg-blue-800">
+    <div className="whitespace-nowrap rounded-md p-3 text-md from-pink-500 to-yellow-500 font-bold bg-clip-text bg-gradient-to-r text-transparent">
       {text}
     </div>
   );
@@ -48,8 +48,8 @@ const Scene = () => {
   const [clicked, click] = useState(false);
   const [maps, setMaps] = useState<MapObject[]>([]);
   useFrame((state, delta) => {
-    ref.current.rotation.x += 0.003;
-    ref.current.rotation.y += 0.003;
+    ref.current.rotation.x += 0.001;
+    ref.current.rotation.y += 0.008;
   });
 
   // useEffect(() => {
@@ -84,68 +84,62 @@ const Scene = () => {
 
   return (
     <>
-      <mesh ref={ref} scale={0.15}>
+      <mesh ref={ref} scale={0.18}>
         <sphereGeometry args={[CircleRadius, 10, 10]} />
-        <meshBasicMaterial
-          wireframe
-          wireframeLinewidth={0.5}
-          color="#06B6D4"
-          transparent
-          opacity={0.1}
-        />
-        <Html distanceFactor={10} sprite position={[0, 5, 8.66]} center>
+        <meshBasicMaterial color="#06B6D4" opacity={0} transparent />
+        <Html distanceFactor={10} sprite position={[0, 3, 8.66]} center>
           <TextBox text={skills[0]} />
         </Html>
-        <Html distanceFactor={10} sprite position={[8.66, 5, 5]} center>
+        <Html distanceFactor={10} sprite position={[4.66, 5, 5]} center>
           <TextBox text={skills[1]} />
         </Html>
-        <Html distanceFactor={10} sprite position={[8.66, 5, -5]} center>
+        <Html distanceFactor={10} sprite position={[7.66, 5, -5]} center>
           <TextBox text={skills[2]} />
         </Html>
 
-        <Html distanceFactor={10} sprite position={[0, 5, -8.66]} center>
+        <Html distanceFactor={10} sprite position={[0, 4, -5.66]} center>
           <TextBox text={skills[3]} />
         </Html>
-        <Html distanceFactor={10} sprite position={[-8.66, 5, -5]} center>
+        <Html distanceFactor={10} sprite position={[-5.66, 5, -5]} center>
           <TextBox text={skills[4]} />
         </Html>
-        <Html distanceFactor={10} sprite position={[-8.66, 5, 5]} center>
+        <Html distanceFactor={10} sprite position={[-9.66, 5, 5]} center>
           <TextBox text={skills[5]} />
         </Html>
-        <Html distanceFactor={10} sprite position={[0, 0, 8.66]} center>
+        <Html distanceFactor={10} sprite position={[0, 0, 7.66]} center>
           <TextBox text={skills[6]} />
         </Html>
-        <Html distanceFactor={10} sprite position={[8.66, 0, 5]} center>
+        <Html distanceFactor={10} sprite position={[10.66, 0, 4]} center>
           <TextBox text={skills[7]} />
         </Html>
         <Html distanceFactor={10} sprite position={[8.66, 0, -5]} center>
           <TextBox text={skills[8]} />
         </Html>
-        <Html distanceFactor={10} sprite position={[0, 0, -8.66]} center>
+        <Html distanceFactor={10} sprite position={[0, 2, -6.66]} center>
           <TextBox text={skills[9]} />
         </Html>
-        <Html distanceFactor={10} sprite position={[-8.66, 0, -5]} center>
+        <Html distanceFactor={10} sprite position={[-5.66, 0, -5]} center>
           <TextBox text={skills[10]} />
         </Html>
-        <Html distanceFactor={10} sprite position={[-8.66, 0, 5]} center>
+        <Html distanceFactor={10} sprite position={[-5.66, 0, 5]} center>
           <TextBox text={skills[11]} />
         </Html>
-        <Html distanceFactor={10} sprite position={[0, -5, 8.66]} center>
+        <Html distanceFactor={10} sprite position={[0, -7, 3.66]} center>
           <TextBox text={skills[12]} />
         </Html>
-        <Html distanceFactor={10} sprite position={[8.66, -5, 5]} center>
+        <Html distanceFactor={10} sprite position={[8.66, -3, 5]} center>
           <TextBox text={skills[13]} />
         </Html>
-        <Html distanceFactor={10} sprite position={[8.66, -5, -5]} center>
+        <Html distanceFactor={10} sprite position={[8.66, -2, -5]} center>
           <TextBox text={skills[14]} />
         </Html>
-        <Html distanceFactor={10} sprite position={[0, -5, -8.66]} center>
+        <Html distanceFactor={10} sprite position={[0, -5, -4.66]} center>
           <TextBox text={skills[15]} />
         </Html>
-        <Html distanceFactor={10} sprite position={[-8.66, -5, -5]} center>
+        <Html distanceFactor={10} sprite position={[-8.66, -4, -5]} center>
           <TextBox text={skills[16]} />
         </Html>
-        <Html distanceFactor={10} sprite position={[-8.66, -5, 5]} center>
+        <Html distanceFactor={10} sprite position={[-5.66, -5, 4]} center>
           <TextBox text={skills[17]} />
         </Html>
         {/* {maps.map((item, idx) => {
@@ -167,7 +161,7 @@ const Scene = () => {
 };
 
 const SphericalNode = () => (
-  <Canvas>
+  <Canvas style={{ overflow: "visible" }}>
     <fog attach="fog" args={["#202025", 0, 80]} />
     <Scene />
     <TrackballControls />

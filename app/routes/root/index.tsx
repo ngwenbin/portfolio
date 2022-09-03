@@ -2,7 +2,7 @@ import React from "react";
 import { Hero } from "~/components";
 
 const RootIndex = () => (
-  <div className="sm:hidden">
+  <div className="lg:hidden">
     <Hero />
   </div>
 );
