@@ -70,38 +70,40 @@ const Terminal = () => {
   };
 
   return (
-    <div className="flex flex-col bg-black rounded-md w-full sm:text-xs text-[10px] font-fira min-h-[208px] tracking-wide  lg:max-w-[484px] ">
-      <div className="relative bg-[#393939] rounded-t-md py-0.5">
-        <p className="absolute z-10 w-full text-center">Terminal</p>
-        <div className="flex items-center bg-transparent gap-x-1 h-4 pl-2">
-          <div className="flex h-2 w-2 items-center justify-center rounded-full p-1 bg-red-500" />
-          <div className="flex h-2 w-2 items-center justify-center rounded-full p-1 bg-yellow-500" />
-          <div className="flex h-2 w-2 items-center justify-center rounded-full p-1 bg-green-500" />
+    <div className="h-[240px] mb-10">
+      <div className="flex flex-col bg-black rounded-md w-full sm:text-xs text-[10px] h-full font-fira tracking-wide max-w-[464px] mx-auto">
+        <div className="relative bg-[#393939] rounded-t-md py-0.5">
+          <p className="absolute z-10 w-full text-center">Terminal</p>
+          <div className="flex items-center bg-transparent gap-x-1 h-4 pl-2">
+            <div className="flex h-2 w-2 items-center justify-center rounded-full p-1 bg-red-500" />
+            <div className="flex h-2 w-2 items-center justify-center rounded-full p-1 bg-yellow-500" />
+            <div className="flex h-2 w-2 items-center justify-center rounded-full p-1 bg-green-500" />
+          </div>
         </div>
-      </div>
 
-      <div className="overflow-y-auto bg-black pl-2 py-0.5 rounded-b-md">
-        {terminalRes.map((consoleLog, idx) => {
-          return (
-            <div key={idx}>
-              <p className="empty:hidden pb-1 whitespace-pre-line">
-                {`${consoleLog}`}
-              </p>
-              <div className="flex">
-                <span className="whitespace-nowrap pr-2">{terminalName}</span>
-                <input
-                  id={`command${idx}`}
-                  maxLength={32}
-                  autoComplete="off"
-                  // eslint-disable-next-line jsx-a11y/no-autofocus
-                  autoFocus
-                  className="bg-black resize-none border-none outline-none w-full"
-                  onKeyDown={onCommand}
-                />
+        <div className="overflow-y-auto bg-black pl-2 py-0.5 rounded-b-md">
+          {terminalRes.map((consoleLog, idx) => {
+            return (
+              <div key={idx}>
+                <p className="empty:hidden pb-1 whitespace-pre-line">
+                  {`${consoleLog}`}
+                </p>
+                <div className="flex">
+                  <span className="whitespace-nowrap pr-2">{terminalName}</span>
+                  <input
+                    id={`command${idx}`}
+                    maxLength={32}
+                    autoComplete="off"
+                    // eslint-disable-next-line jsx-a11y/no-autofocus
+                    autoFocus
+                    className="bg-black resize-none border-none outline-none w-full"
+                    onKeyDown={onCommand}
+                  />
+                </div>
               </div>
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
       </div>
     </div>
   );
