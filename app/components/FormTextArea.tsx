@@ -57,7 +57,7 @@ const FormTextArea = ({
           {...Props}
         />
       </div>
-      <div className={clsx("body-small mt-2 text-red-600")} id={`${id}-error`}>
+      <div className={clsx("body-small mt-2 text-red-500")} id={`${id}-error`}>
         {error}
       </div>
     </label>

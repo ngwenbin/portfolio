@@ -5,12 +5,12 @@ import { useIsSubmitting } from "remix-validated-form";
 
 interface FormButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: string | React.ReactNode;
-  buttonClassName?: string;
+  className?: string;
 }
 
 export default function FormButton({
   children = "Submit",
-  buttonClassName,
+  className,
   ...props
 }: FormButtonProps) {
   const isSubmitting = useIsSubmitting();
@@ -19,7 +19,7 @@ export default function FormButton({
     <button
       type="submit"
       disabled={isSubmitting}
-      className={clsx("btn-primary", buttonClassName)}
+      className={clsx("w-min whitespace-nowrap", className)}
       {...props}
     >
       {isSubmitting ? "Submitting" : children}
