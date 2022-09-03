@@ -1,3 +1,4 @@
+/* eslint-disable global-require */
 /** @type {import('tailwindcss').Config} */
 // eslint-disable-next-line import/no-extraneous-dependencies
 // const defaultTheme = require("tailwindcss/defaultTheme");
@@ -13,5 +14,7 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms'),
+  ],
 };

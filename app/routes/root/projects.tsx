@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import React from "react";
-import { useGlobalContext } from "~/context/GlobalContext";
+import useGlobalContext from "~/context/GlobalContext";
 import FolderSvg from "~/images/FolderSvg.webp";
 import { LinkIcon } from "@heroicons/react/outline";
 import impactProject from "~/images/impactProject.webp";
