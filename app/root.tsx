@@ -7,6 +7,7 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
+import { GlobalContextProvider } from "~/context/GlobalContext";
 import styles from "~/styles/app.css";
 
 export function links() {
@@ -25,7 +26,9 @@ const App = () => (
       <Links />
     </head>
     <body className="bg-gradient-to-r from-black to-[#2c3743] h-screen px-4">
-      <Outlet />
+      <GlobalContextProvider>
+        <Outlet />
+      </GlobalContextProvider>
       <ScrollRestoration />
       <Scripts />
       <LiveReload />
