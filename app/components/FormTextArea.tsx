@@ -3,7 +3,7 @@ import clsx from "clsx";
 import { useField } from "remix-validated-form";
 import type { InputHTMLAttributes } from "react";
 
-interface FormInputProps extends InputHTMLAttributes<HTMLInputElement> {
+interface FormTextAreaProps extends InputHTMLAttributes<HTMLTextAreaElement> {
   id: string;
   name: string;
   label?: string;
@@ -14,7 +14,7 @@ interface FormInputProps extends InputHTMLAttributes<HTMLInputElement> {
   type?: string;
 }
 
-const FormInput = ({
+const FormTextArea = ({
   id,
   name,
   label,
@@ -24,7 +24,7 @@ const FormInput = ({
   helperTextClassName,
   type = "text",
   ...Props
-}: FormInputProps) => {
+}: FormTextAreaProps) => {
   const { error, getInputProps, validate } = useField(id);
   return (
     <label
@@ -36,7 +36,7 @@ const FormInput = ({
     >
       {label}
       <div className="mt-1">
-        <input
+        <textarea
           {...getInputProps({
             id,
             onBlur: () => {
@@ -45,6 +45,7 @@ const FormInput = ({
           })}
           id={id}
           name={name}
+          rows={7}
           className={clsx(
             "appearance-none block w-full px-4 py-3 border border-gray-300 text-gray-900 rounded-lg shadow-sm placeholder-gray-400 focus:outline-none focus:ring-cyan-500 focus:border-cyan-500",
             inputclassName,
@@ -53,7 +54,6 @@ const FormInput = ({
                 error,
             }
           )}
-          type={type}
           {...Props}
         />
       </div>
@@ -64,4 +64,4 @@ const FormInput = ({
   );
 };
 
-export default FormInput;
+export default FormTextArea;
