@@ -25,7 +25,7 @@ const App = () => (
       <Meta />
       <Links />
     </head>
-    <body className="bg-gradient-to-r from-black to-[#2c3743] h-screen px-4">
+    <body className="bg-gradient-to-r from-black to-[#2c3743] h-screen px-4 bg-black">
       <GlobalContextProvider>
         <Outlet />
       </GlobalContextProvider>
