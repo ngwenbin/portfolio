@@ -1,10 +1,10 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import React, { useState } from "react";
 import useGlobalContext from "~/context/GlobalContext";
-import FolderSvg from "~/images/FolderSvg.webp";
+import FolderSvg from "~/images/folderSvg.webp";
 import { LinkIcon } from "@heroicons/react/outline";
-import impactProject from "~/images/impactProject.webp";
-import recyclablesProject from "~/images/recyclablesProject.webp";
+import ImpactProject from "~/images/impactProject.webp";
+import RecyclablesProject from "~/images/recyclablesProject.webp";
 import clsx from "clsx";
 
 interface ProjectItem {
@@ -26,7 +26,7 @@ const projectItems: Array<ProjectItem> = [
     name: "Recyclables",
     details: {
       title: "Rag and bone man hailing telegram bot",
-      banner: recyclablesProject,
+      banner: RecyclablesProject,
       description:
         "Spearheaded a social initiative and led a team of students to build a Telegram bot that enables Singapore residents to hail for a rag and bone man. Collected 4.2 tons of recyclables with over 780 users. Responsible for developing the Telegram bot using python and Firebase, and implemented a geofence-based user registration system to enable ease of region expansion",
       skills: [
@@ -44,7 +44,7 @@ const projectItems: Array<ProjectItem> = [
     name: "Impact giving map",
     details: {
       title: "Impact giving map",
-      banner: impactProject,
+      banner: ImpactProject,
       description:
         "Designed and developed an interactive map with React.js, deck.gl, Aloglia search and internal APIs to provide giving impact data visualization for stakeholders. *Independent project initiated while interning at B1G1. ",
       skills: ["React", "Deck.gl", "REST API", "Aloglia Search"],

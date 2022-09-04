@@ -94,6 +94,7 @@ const Terminal = () => {
                     id={`command${idx}`}
                     maxLength={32}
                     autoComplete="off"
+                    placeholder={idx === 0 ? "try git checkout skills" : ""}
                     // eslint-disable-next-line jsx-a11y/no-autofocus
                     autoFocus
                     className="bg-black resize-none border-none outline-none w-full"
