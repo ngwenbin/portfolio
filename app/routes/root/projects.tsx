@@ -1,11 +1,11 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import React, { useState } from "react";
 import useGlobalContext from "~/context/GlobalContext";
-import FolderSvg from "~/images/folderSvg.webp";
+import clsx from "clsx";
 import { LinkIcon } from "@heroicons/react/outline";
+import FolderSvg from "~/images/folderIcon.webp";
 import ImpactProject from "~/images/impactProject.webp";
 import RecyclablesProject from "~/images/recyclablesProject.webp";
-import clsx from "clsx";
 
 interface ProjectItem {
   name: string;
